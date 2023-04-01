@@ -7,8 +7,7 @@ const Home = () => {
   const { data, isLoading, error } = useSelector((state) => state.image);
   console.log(data);
   useEffect(() => {
-    // dispatch(fetchImgurData("hot", "viral", "day", 1, true, true, true));
-    testAxios();
+    dispatch(fetchImgurData("hot", "viral", "day", 1, true, true, true));
   }, []);
 
   return (
