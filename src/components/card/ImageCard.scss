@@ -1,0 +1,10 @@
+.media {
+  height: 200px;
+  overflow: hidden;
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

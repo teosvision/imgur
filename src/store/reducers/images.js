@@ -2,14 +2,25 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [],
+  gallery: "hot",
+  sort: "viral",
+  window: "day",
+  page: 1,
+  showViral: true,
+  showMature: true,
+  albumPreviews: true,
   isLoading: false,
   error: null,
+  modal: undefined,
 };
 
 const imgurSlice = createSlice({
   name: "image",
-  initialState: initialState,
+  initialState,
   reducers: {
+    updateState: (state, action) => {
+      state[action.payload.state] = action.payload.value;
+    },
     fetchDataStart: (state) => {
       state.isLoading = true;
       state.error = null;
@@ -27,7 +38,11 @@ const imgurSlice = createSlice({
   },
 });
 
-export const { fetchDataStart, fetchDataSuccess, fetchDataFailure } =
-  imgurSlice.actions;
+export const {
+  fetchDataStart,
+  fetchDataSuccess,
+  fetchDataFailure,
+  updateState,
+} = imgurSlice.actions;
 
 export default imgurSlice.reducer;
