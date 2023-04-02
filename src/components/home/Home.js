@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchImgurData } from "../../store/utilis/thunk";
 import ImageCard from "../card/ImageCard";
-import "./Home.scss";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
-import { updateState } from "../../store/reducers/images";
+import Pagination from "../pagination/Pagination";
 import Modal from "../modal/Modal";
+import "./Home.scss";
+import Animation from "../../assets/animation.json";
+import Lottie from "lottie-react";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -39,26 +39,26 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="galery">
-      {isLoading ? (
-        <h1>Loading</h1>
-      ) : error ? (
-        <h1>Error</h1>
-      ) : (
-        data?.slice(page * 6 - 6, page * 6).map((item) => {
-          return <ImageCard key={item.id} {...item} />;
-        })
-      )}
-      <Modal />
-      <Stack spacing={2}>
-        <Pagination
-          onChange={(_, value) =>
-            dispatch(updateState({ state: "page", value }))
-          }
-          count={Math.round(data?.length / 6)}
-        />
-      </Stack>
-    </div>
+    <>
+      <div className="gallery">
+        {isLoading ? (
+          <div className="animation">
+            {" "}
+            <Lottie className="yoda" animationData={Animation} />
+          </div>
+        ) : error ? (
+          <h1>Error</h1>
+        ) : (
+          data?.slice(page * 6 - 6, page * 6).map((item) => {
+            return <ImageCard key={item.id} {...item} />;
+          })
+        )}
+        {data?.slice(page * 6 - 6, page * 6).map((item) => {
+          return <Modal key={item.id} {...item} />;
+        })}
+      </div>
+      {/* <Pagination /> */}
+    </>
   );
 };
 

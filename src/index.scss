@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/herobg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  position: relative;
+  h3 {
+    color: white;
+  }
 }
 
 code {
@@ -12,5 +21,25 @@ code {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: azure;
+}
+
+.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  background-color: rgb(88, 88, 88);
+  color: white;
+  width: 50px;
+  .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: white;
+  }
+}
+.css-q8hpuo-MuiFormControl-root {
+  label {
+    color: aliceblue;
+    ::selection {
+      color: aliceblue;
+    }
+  }
+}
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+  background-color: rgb(88, 88, 88);
 }

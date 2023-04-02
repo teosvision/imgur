@@ -29,7 +29,7 @@ const Header = () => {
     { value: "week", description: "Week" },
     { value: "month", description: "Month" },
     { value: "year", description: "Year" },
-    { value: "all", description: "all" },
+    { value: "all", description: "All" },
   ];
   const handleGalleryChange = async (e) => {
     dispatch(updateState({ state: "gallery", value: e.target.value }));
@@ -85,33 +85,37 @@ const Header = () => {
   };
   return (
     <Container className="header">
-      <Link to="/">
-        <h1 className="name">Viral Images</h1>
-      </Link>
+      <div className="logo">
+        <Link to="/">
+          <h1 className="name">Imgur Images</h1>
+        </Link>
+      </div>
       <div className="function">
-        <Dropdown
-          options={galleryOptions}
-          label={"Gallery"}
-          value={gallery}
-          action={handleGalleryChange}
-        />
-        <Dropdown
-          options={sortOptions}
-          label={"Sort"}
-          value={sort}
-          action={handleSortChange}
-        />
+        <div className="button-left">
+          <h3>Show Viral</h3>
+          <Switch checked={showViral} onChange={handleChangeViral} />
+        </div>
+        <div className="button-right">
+          <Dropdown
+            options={galleryOptions}
+            label={"Gallery"}
+            value={gallery}
+            action={handleGalleryChange}
+          />
+          <Dropdown
+            options={sortOptions}
+            label={"Sort"}
+            value={sort}
+            action={handleSortChange}
+          />
 
-        <FormControlLabel
-          control={<Switch checked={showViral} onChange={handleChangeViral} />}
-          label="Show viral"
-        />
-        <Dropdown
-          options={windowOptions}
-          label={"Gallery"}
-          value={window}
-          action={handleWindowChange}
-        />
+          <Dropdown
+            options={windowOptions}
+            label={"Day"}
+            value={window}
+            action={handleWindowChange}
+          />
+        </div>
       </div>
     </Container>
   );

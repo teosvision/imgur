@@ -1,0 +1,51 @@
+.box {
+  //   position: "absolute",
+  // top: "50%",
+  // left: "50%",
+  // transform: "translate(-50%, -50%)",
+  // minWidth: 300,
+  // bgcolor: "background.paper",
+  // border: "none",
+  // borderRadius: "0.5rem",
+  // boxShadow: 24,
+  // p: 2,
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 600px;
+  // min-height: 400px;
+  background: rgb(211, 26, 220);
+  background: linear-gradient(
+    90deg,
+    rgba(211, 26, 220, 1) 0%,
+    rgba(65, 29, 253, 1) 100%
+  );
+  border: none !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2px black;
+  padding: 1rem;
+  .media2 {
+    height: 20rem;
+    overflow: hidden;
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .second {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    .vote {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}

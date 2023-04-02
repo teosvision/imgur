@@ -3,7 +3,12 @@ import React from "react";
 
 const MainLayout = (props) => {
   return (
-    <Container style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+    <Container
+      style={{
+        marginTop: "1rem",
+        marginBottom: "1rem",
+      }}
+    >
       {props.children}
     </Container>
   );

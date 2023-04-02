@@ -11,7 +11,7 @@ const initialState = {
   albumPreviews: true,
   isLoading: false,
   error: null,
-  modal: undefined,
+  modal: false,
 };
 
 const imgurSlice = createSlice({

@@ -1,10 +1,40 @@
-.media {
-  height: 200px;
-  overflow: hidden;
-  img,
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card {
+  background: rgb(211, 26, 220);
+  background: linear-gradient(
+    90deg,
+    rgba(211, 26, 220, 1) 0%,
+    rgba(65, 29, 253, 1) 100%
+  );
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  h3 {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    line-height: 1.14;
+    font-size: 16px;
+    text-align: left;
+    max-height: 45px;
+    padding: 0 15px;
+  }
+  @media (max-width: 800px) {
+    height: 300px;
+  }
+  .media {
+    height: 200px;
+    overflow: hidden;
+    @media (max-width: 800px) {
+      height: 300px;
+    }
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
