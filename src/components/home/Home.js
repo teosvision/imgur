@@ -53,9 +53,7 @@ const Home = () => {
             return <ImageCard key={item.id} {...item} />;
           })
         )}
-        {data?.slice(page * 6 - 6, page * 6).map((item) => {
-          return <Modal key={item.id} {...item} />;
-        })}
+        <Modal />
       </div>
       {/* <Pagination /> */}
     </>
