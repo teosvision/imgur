@@ -12,7 +12,11 @@ const Pagination = () => {
       <Stack spacing={2}>
         <MUIPagination
           size="large"
-          sx={{ color: "white", backgroundColor: "white" }}
+          sx={{
+            color: "white",
+            backgroundColor: "white",
+            borderRadius: "0.5rem",
+          }}
           onChange={(_, value) =>
             dispatch(updateState({ state: "page", value }))
           }
