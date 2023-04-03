@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
 import { fetchImgurData } from "../../store/utilis/thunk";
 import ImageCard from "../card/ImageCard";
 import Modal from "../modal/Modal";
-import "./Home.scss";
 import Animation from "../../assets/animation.json";
 import Lottie from "lottie-react";
 import File from "../file/File";
+import "./Home.scss";
 const Home = () => {
   const dispatch = useDispatch();
 
