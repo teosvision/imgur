@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "./dropdown/Dropdown";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImgurData } from "../../store/utilis/thunk";
 import { updateState } from "../../store/reducers/data";
