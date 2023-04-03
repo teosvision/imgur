@@ -85,6 +85,8 @@
     height: 150px;
     overflow-y: scroll;
     text-overflow: ellipsis;
+    padding: 0.5rem;
+    margin-top: 0.1rem;
   }
   .second1 {
     overflow-y: hidden;
@@ -97,4 +99,8 @@
       height: 300px;
     }
   }
+}
+
+.css-0 {
+  width: 300px;
 }

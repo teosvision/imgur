@@ -18,14 +18,6 @@ const Modal = () => {
     dispatch(updateState({ state: "modal", value: undefined }));
   };
 
-  const style = {
-    position: "relative",
-    // top: "50%",
-    // left: "50%",
-    // transform: "translate(-50%, -50%)",
-    height: "300px",
-    p: 4,
-  };
   const { modal } = useSelector((state) => state.image);
   const { images } = modal || {};
   console.log(images?.length, "gjatsia");
@@ -38,8 +30,13 @@ const Modal = () => {
         aria-describedby="modal-modal-description"
       >
         {images?.length > 1 ? (
-          <div className="box">
-            <Carousel autoPlay={false} height={310} onChange={setCarouselIndex}>
+          <Box className="box">
+            <Carousel
+              swipe
+              autoPlay={false}
+              height={310}
+              onChange={setCarouselIndex}
+            >
               {images?.map((item) => (
                 <div className="carousel" key={item.id}>
                   {item.type === "video/mp4" ? (
@@ -79,10 +76,10 @@ const Modal = () => {
                 </div>
               )}
             </Typography>
-          </div>
+          </Box>
         ) : (
-          <div className="box">
-            <Box className="modal">
+          <Box className="box">
+            <div className="modal">
               {images?.map((item) => (
                 <div className="carousel" key={item.id}>
                   {item.type === "video/mp4" ? (
@@ -96,7 +93,7 @@ const Modal = () => {
                   )}
                 </div>
               ))}
-            </Box>
+            </div>
             <Typography>
               <div className="first">
                 <h3>{modal?.title}</h3>
@@ -121,7 +118,7 @@ const Modal = () => {
                 </div>
               )}
             </Typography>
-          </div>
+          </Box>
         )}
       </MUIModal>
     </div>
