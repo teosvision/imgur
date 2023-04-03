@@ -14,8 +14,12 @@ body {
   position: relative;
   h3,
   h4,
-  h5 {
+  h5,
+  .h3 {
     color: white;
+  }
+  .h3 {
+    font-size: 1.17em;
   }
 }
 

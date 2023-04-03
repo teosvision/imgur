@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchImgurData } from "../../store/utilis/thunk";
-import ImageCard from "../card/ImageCard";
-import Modal from "../modal/Modal";
+import ImageCard from "../../components/card/ImageCard";
+import Modal from "../../components/modal/Modal";
 import Animation from "../../assets/animation.json";
 import Lottie from "lottie-react";
-import File from "../file/File";
+import Pagination from "../../components/pagination/Pagination";
 import "./Home.scss";
 const Home = () => {
   const dispatch = useDispatch();
@@ -21,9 +21,9 @@ const Home = () => {
     window,
     showMature,
     albumPreviews,
-  } = useSelector((state) => state.image);
+  } = useSelector((state) => state.data);
 
-  useEffect(() => {
+  const getData = () => {
     dispatch(
       fetchImgurData(
         gallery,
@@ -34,7 +34,11 @@ const Home = () => {
         albumPreviews
       )
     );
-  }, [gallery, sort, window, showViral, showMature, albumPreviews]);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -52,9 +56,9 @@ const Home = () => {
           })
         )}
 
-        {/* <File /> */}
         <Modal />
       </div>
+      <Pagination className="pagination" />
     </>
   );
 };

@@ -1,0 +1,13 @@
+.pagination {
+  position: fixed;
+  bottom: 0px;
+  left: 1rem;
+  right: 1rem;
+  z-index: 3;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  @media (min-width: 1280px) {
+    left: 10%;
+    right: 10%;
+  }
+}

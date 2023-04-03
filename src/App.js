@@ -1,20 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/home/Home";
-import Header from "./components/Header";
-import "./App.scss";
+import Home from "./screens/home/Home";
+import Header from "./components/header/Header";
 import MainLayout from "./layouts/MainLayout";
-import File from "./components/file/File";
-import Pagination from "./components/pagination/Pagination";
+import "./components/pagination/Pagination.scss";
+import "./App.scss";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Pagination />
-      </MainLayout>
+      <div className="App">
+        <Header />
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </MainLayout>
+      </div>
     </BrowserRouter>
   );
 };

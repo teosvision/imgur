@@ -3,7 +3,7 @@ import {
   fetchDataStart,
   fetchDataSuccess,
   fetchDataFailure,
-} from "../reducers/images";
+} from "../reducers/data";
 
 const clientId = "f4d5cb8a04710d0";
 

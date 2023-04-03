@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
-import "../App.scss";
+import "./Header.scss";
 import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown/Dropdown";
+import Dropdown from "../dropdown/Dropdown";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchImgurData } from "../store/utilis/thunk";
-import { updateState } from "../store/reducers/images";
+import { fetchImgurData } from "../../store/utilis/thunk";
+import { updateState } from "../../store/reducers/data";
 import Switch from "@mui/material/Switch";
-import { FormControlLabel } from "@mui/material";
+
 const Header = () => {
   const dispatch = useDispatch();
   const { gallery, showViral, sort, window, showMature, albumPreviews } =
-    useSelector((state) => state.image);
+    useSelector((state) => state.data);
 
   const galleryOptions = [
     { value: "hot", description: "Hot" },

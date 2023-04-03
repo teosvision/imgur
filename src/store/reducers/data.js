@@ -15,7 +15,7 @@ const initialState = {
 };
 
 const imgurSlice = createSlice({
-  name: "image",
+  name: "data",
   initialState,
   reducers: {
     updateState: (state, action) => {

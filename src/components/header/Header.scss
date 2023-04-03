@@ -1,0 +1,42 @@
+.header {
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .name {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+      to right,
+      rgba(211, 26, 220, 1) 0%,
+      rgba(65, 29, 253, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .function {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 800px) {
+      align-items: center;
+      display: grid;
+    }
+
+    .button-left {
+      display: flex;
+      align-items: center;
+    }
+    .button-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      @media (max-width: 280px) {
+        align-items: center;
+        display: grid;
+      }
+    }
+  }
+}

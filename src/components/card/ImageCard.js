@@ -1,32 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import Carousel from "react-material-ui-carousel";
-import "./ImageCard.scss";
 import { useDispatch } from "react-redux";
-import { updateState } from "../../store/reducers/images";
-import { Link } from "react-router-dom";
+import { updateState } from "../../store/reducers/data";
+import "./ImageCard.scss";
 const ImageCard = (item) => {
-  const { images, id } = item;
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  console.log("images", images);
-  // console.log("desc", item);
+  const { images } = item;
   const dispatch = useDispatch();
   const openModal = () => {
     dispatch(updateState({ state: "modal", value: item }));
   };
-  console.log(item.id, "item");
   if (images?.length >= 0) {
     return (
       <Card className="card" onClick={openModal}>
-        {/* <Link to={`/${id}`}> */}
         {images.length > 1 ? (
-          <Carousel
-            swipe
-            animation="fade"
-            autoPlay={false}
-            height={200}
-            onChange={setCarouselIndex}
-          >
+          <Carousel swipe animation="fade" autoPlay={false} height={200}>
             {images.map((item) => (
               <div className="media" key={item.id}>
                 {item.type === "video/mp4" ? (
@@ -55,7 +43,6 @@ const ImageCard = (item) => {
           {item.title.substring(0, 80)}
           {item.title.length > 50 && ` ...`}
         </h3>
-        {/* </Link> */}
       </Card>
     );
   }

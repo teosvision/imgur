@@ -28,7 +28,6 @@
   .carousel {
     padding-left: 4rem;
     padding-right: 4rem;
-
     .media2 {
       position: absolute;
       top: 50%;
@@ -82,8 +81,9 @@
     }
   }
   .second2 {
-    height: 150px;
-    overflow-y: scroll;
+    height: 130px;
+    overflow-y: auto;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     padding: 0.5rem;
     margin-top: 0.1rem;
@@ -93,7 +93,8 @@
   }
 
   .modal {
-    height: 600px;
+    height: 60vh;
+    padding-bottom: 30px;
     position: relative;
     @media (max-width: 540px) {
       height: 300px;
