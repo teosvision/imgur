@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  min-width: 600px;
   background: linear-gradient(
     90deg,
     rgba(211, 26, 220, 1) 0%,
@@ -17,8 +17,9 @@
   font-weight: 800;
   color: white;
 
-  @media (max-width: 520px) {
-    width: 300px;
+  @media (max-width: 540px) {
+    min-width: 320px;
+
     .carousel {
       padding-left: 2rem;
       padding-right: 2rem;
@@ -29,8 +30,12 @@
     padding-right: 4rem;
 
     .media2 {
-      height: 20rem;
-      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
 
       img,
       video {
@@ -38,6 +43,7 @@
         height: 100%;
         object-fit: contain;
         border-radius: 0.3rem;
+        z-index: 3;
       }
     }
   }
@@ -52,7 +58,7 @@
       text-align: center;
       color: white;
       gap: 1rem;
-      @media (max-width: 520px) {
+      @media (max-width: 540px) {
         display: flex;
         flex-wrap: wrap;
       }
@@ -76,9 +82,20 @@
       padding: 0.1rem 0.1rem;
     }
   }
-  .second {
+  .second2 {
     height: 150px;
     overflow-y: scroll;
     text-overflow: ellipsis;
+  }
+  .second1 {
+    overflow-y: hidden;
+  }
+
+  .modal {
+    height: 600px;
+    position: relative;
+    @media (max-width: 540px) {
+      height: 400px;
+    }
   }
 }

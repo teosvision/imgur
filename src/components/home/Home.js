@@ -35,7 +35,7 @@ const Home = () => {
         albumPreviews
       )
     );
-  }, []);
+  }, [gallery, sort, window, showViral, showMature, albumPreviews]);
 
   return (
     <>
