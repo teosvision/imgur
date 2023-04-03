@@ -43,7 +43,6 @@
         height: 100%;
         object-fit: contain;
         border-radius: 0.3rem;
-        z-index: 3;
       }
     }
   }
@@ -95,7 +94,7 @@
     height: 600px;
     position: relative;
     @media (max-width: 540px) {
-      height: 400px;
+      height: 300px;
     }
   }
 }
