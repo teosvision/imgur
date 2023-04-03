@@ -8,7 +8,7 @@ import {
 const clientId = "f4d5cb8a04710d0";
 
 export const fetchImgurData =
-  (section, sort, window, showViral, showMature, albumPreviews) =>
+  (section, sort, window, showViral, showMature, albumPreviews, id) =>
   async (dispatch) => {
     try {
       dispatch(fetchDataStart());

@@ -1,22 +1,9 @@
 .box {
-  //   position: "absolute",
-  // top: "50%",
-  // left: "50%",
-  // transform: "translate(-50%, -50%)",
-  // minWidth: 300,
-  // bgcolor: "background.paper",
-  // border: "none",
-  // borderRadius: "0.5rem",
-  // boxShadow: 24,
-  // p: 2,
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 300px;
-  max-width: 600px;
-  // min-height: 400px;
-  background: rgb(211, 26, 220);
+  width: 500px;
   background: linear-gradient(
     90deg,
     rgba(211, 26, 220, 1) 0%,
@@ -26,26 +13,72 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 2px black;
   padding: 1rem;
-  .media2 {
-    height: 20rem;
-    overflow: hidden;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
 
-    img,
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+  @media (max-width: 520px) {
+    width: 300px;
+    .carousel {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
+  .carousel {
+    padding-left: 4rem;
+    padding-right: 4rem;
 
-  .second {
-    display: flex;
-    justify-content: space-between;
-    color: white;
+    .media2 {
+      height: 20rem;
+      overflow: hidden;
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+  .first {
+    display: grid;
+    font-size: 16px;
     .vote {
+      display: grid;
+      align-items: center;
+      justify-content: left;
+      grid-template-columns: 200px 200px;
+      text-align: center;
+      color: white;
+      gap: 1rem;
+      @media (max-width: 520px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .likes {
       display: flex;
+      justify-content: space-around;
       align-items: center;
       gap: 0.5rem;
+      background-color: rgba(92, 92, 92, 0.205);
+      border-radius: 0.5rem;
+      padding: 0.1rem;
     }
+    .score {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(218, 218, 218, 0.205);
+      border-radius: 0.5rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+  .second {
+    height: 150px;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
   }
 }

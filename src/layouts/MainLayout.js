@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
 import React from "react";
-
+import Box from "@mui/material/Box";
 const MainLayout = (props) => {
   return (
     <Container
@@ -9,7 +9,7 @@ const MainLayout = (props) => {
         marginBottom: "1rem",
       }}
     >
-      {props.children}
+      <Box sx={{ minHeight: "80vh" }}>{props.children}</Box>
     </Container>
   );
 };

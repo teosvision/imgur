@@ -10,13 +10,9 @@
   }
   .animation {
     position: absolute;
-    top: 1000;
-    left: 0;
-    right: 0;
-    bottom: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .yoda {
       width: 15rem;
       height: 15rem;

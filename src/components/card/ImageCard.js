@@ -8,8 +8,9 @@ import Carousel from "react-material-ui-carousel";
 import "./ImageCard.scss";
 import { useDispatch } from "react-redux";
 import { updateState } from "../../store/reducers/images";
+import { Link } from "react-router-dom";
 const ImageCard = (item) => {
-  const { images } = item;
+  const { images, id } = item;
   const [carouselIndex, setCarouselIndex] = useState(0);
   console.log("images", images);
   // console.log("desc", item);
@@ -17,9 +18,11 @@ const ImageCard = (item) => {
   const openModal = () => {
     dispatch(updateState({ state: "modal", value: item }));
   };
+  console.log(item.id, "item");
   if (images?.length >= 0) {
     return (
       <Card className="card" onClick={openModal}>
+        {/* <Link to={`/${id}`}> */}
         {images.length > 1 ? (
           <Carousel
             swipe
@@ -56,6 +59,7 @@ const ImageCard = (item) => {
           {item.title.substring(0, 80)}
           {item.title.length > 50 && ` ...`}
         </h3>
+        {/* </Link> */}
       </Card>
     );
   }

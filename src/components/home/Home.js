@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchImgurData } from "../../store/utilis/thunk";
 import ImageCard from "../card/ImageCard";
-import Pagination from "../pagination/Pagination";
 import Modal from "../modal/Modal";
 import "./Home.scss";
 import Animation from "../../assets/animation.json";
 import Lottie from "lottie-react";
-
+import File from "../file/File";
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -53,9 +52,10 @@ const Home = () => {
             return <ImageCard key={item.id} {...item} />;
           })
         )}
+
+        {/* <File /> */}
         <Modal />
       </div>
-      {/* <Pagination /> */}
     </>
   );
 };
