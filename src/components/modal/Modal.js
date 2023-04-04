@@ -40,11 +40,11 @@ const Modal = () => {
               {images?.map((item) => (
                 <div className="carousel" key={item.id}>
                   {item.type === "video/mp4" ? (
-                    <div className="media2">
+                    <div className="media">
                       <video controls src={item.mp4} />
                     </div>
                   ) : (
-                    <div className="media2">
+                    <div className="media">
                       <img src={item.link} alt="" />
                     </div>
                   )}
@@ -56,11 +56,11 @@ const Modal = () => {
               {images?.map((item) => (
                 <div className="carousel" key={item.id}>
                   {item.type === "video/mp4" ? (
-                    <div className="media2">
+                    <div className="media">
                       <video controls src={item.mp4} />
                     </div>
                   ) : (
-                    <div className="media2">
+                    <div className="media">
                       <img src={item.link} alt="" />
                     </div>
                   )}

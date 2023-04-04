@@ -28,7 +28,7 @@
   .carousel {
     padding-left: 4rem;
     padding-right: 4rem;
-    .media2 {
+    .media {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -95,6 +95,8 @@
   .modal {
     height: 60vh;
     padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     position: relative;
     @media (max-width: 540px) {
       height: 300px;
