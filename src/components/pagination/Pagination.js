@@ -8,8 +8,8 @@ const Pagination = () => {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.data);
   return (
-    <div>
-      <Stack className="pagination " spacing={2}>
+    <div className="pagination ">
+      <Stack spacing={2}>
         <MUIPagination
           size="medium"
           onChange={(_, value) =>
