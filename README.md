@@ -13,6 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
 Because of Imgur API restrictions the API calls will fail if you use localhost or 127.0.0.1.
 It would be best if you open the app in your browser using your local ip.
 To find your ip you can use ipconfig(windows)/ifconfig(unix)
