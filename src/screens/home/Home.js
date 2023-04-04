@@ -58,7 +58,7 @@ const Home = () => {
 
         <Modal />
       </div>
-      <Pagination className="pagination" />
+      <Pagination />
     </>
   );
 };

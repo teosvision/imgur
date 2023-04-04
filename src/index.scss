@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/herobg.png");
-  // background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,4 +43,9 @@ a {
   background-color: rgb(88, 88, 88) !important;
   color: white !important;
   width: 50px !important;
+}
+
+.MuiPagination-root.MuiPagination-text.css-1oj2twp-MuiPagination-root {
+  display: flex !important;
+  justify-content: center !important;
 }
